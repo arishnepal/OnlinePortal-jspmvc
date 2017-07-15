@@ -5,6 +5,7 @@ import java.util.Date;
 public class NewsDto {
 	private int id;
 	private String content;
+	private String title;
 	private Date date;
 	private String category;
 	private String location;
@@ -20,6 +21,13 @@ public class NewsDto {
 	}
 	public void setContent(String content) {
 		this.content = content;
+	}
+	
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	public Date getDate() {
 		return date;

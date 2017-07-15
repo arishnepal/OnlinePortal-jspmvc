@@ -21,7 +21,5 @@ public class AdminDaoImpl implements AdminDao {
 	} catch (ClassNotFoundException | SQLException e) {
 		e.printStackTrace();
 	}
-	
-//wow
 }
 }
