@@ -22,6 +22,6 @@ public class AdminDaoImpl implements AdminDao {
 		e.printStackTrace();
 	}
 	
-
+//wow
 }
 }
