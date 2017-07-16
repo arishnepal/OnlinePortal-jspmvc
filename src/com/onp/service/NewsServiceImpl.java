@@ -15,8 +15,7 @@ NewsDao newsDao=new NewsDaoImp();
 
 	@Override
 	public void updateNewsInfo(NewsDto newsDto) {
-		
-		
+		newsDao.updateNewsInfo(newsDto);
 	}
 
 
@@ -26,12 +25,11 @@ NewsDao newsDao=new NewsDaoImp();
 
 
 	public void deleteNewsInfo(int id) {
-	
+	newsDao.deleteNewsInfo(id);
 	}
 
 	public NewsDto getNewsInfoByid(int id) {
-
-		return null;
+	return newsDao.getNewsInfoByid(id);
 	}
 
 }

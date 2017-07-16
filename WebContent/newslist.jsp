@@ -16,12 +16,14 @@ request.setAttribute("newss",newsService.getAllNewsInfo()); %>
 <h1>news list</h1>
 <table>
 <thead>
+<a href="addnews.jsp">Add</a>
 <tr>
 <th>id</th>
 <th>title</th>
 <th>location</th>
 <th>category</th>
 <th>date</th>
+<th>actions<th>
 </tr>
 </thead>
 <tbody>
@@ -32,6 +34,7 @@ request.setAttribute("newss",newsService.getAllNewsInfo()); %>
 <td><c:out value="${news.location}"/></td>
 <td><c:out value="${news.category}"/></td>
 <td><c:out value="${news.date}"/></td>
+<td><a href="NewsController?id=${news.id }&action=edit">Edit</a> <a href="NewsController?id=${news.id }&action=delete">Delete</a></td>
 </tr>
 </c:forEach>
 </tbody>

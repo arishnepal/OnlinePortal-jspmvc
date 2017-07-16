@@ -8,6 +8,7 @@
 </head>
 <body>
 <form method="post" action="NewsController">
+<input type="text" name="actionid" value="create" hidden="true"> 
 <div>
 <label>title:</label>
 <textarea rows="1" cols="100" name="title"></textarea>
