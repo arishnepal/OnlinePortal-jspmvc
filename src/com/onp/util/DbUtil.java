@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class DbUtil {
-		private static String url = "jdbc:mysql://localhost:3306/";
+		private static String url = "jdbc:mysql://localhost:3307/";
 		private static String databaseName = "onp";
 		private static String user = "root";
 		private static String pass = "root";

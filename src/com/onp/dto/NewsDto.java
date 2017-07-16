@@ -6,7 +6,7 @@ public class NewsDto {
 	private int id;
 	private String content;
 	private String title;
-	private Date date;
+	private String date;
 	private String category;
 	private String location;
 	private String imageUrl;
@@ -29,10 +29,10 @@ public class NewsDto {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 	public String getCategory() {

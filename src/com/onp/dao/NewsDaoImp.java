@@ -12,14 +12,14 @@ import com.onp.util.DbUtil;
 public class NewsDaoImp implements NewsDao{
 PreparedStatement ps;
 	public void saveNewsInfo(NewsDto newsDto) {
-			String sql="INSERT into news(content,title,category,location,image_url) VALUES(?,?,?,?,?)";
+			String sql="INSERT into news(content,title,category,location,date) VALUES(?,?,?,?,?)";
 			try {
 				ps=DbUtil.getConnection().prepareStatement(sql);
 				ps.setString(1, newsDto.getContent());
 				ps.setString(2, newsDto.getTitle());
-				ps.setString(4, newsDto.getCategory());
+				ps.setString(3, newsDto.getCategory());
 				ps.setString(4,newsDto.getLocation());
-				ps.setString(5, newsDto.getImageUrl());
+				ps.setString(5, newsDto.getDate());
 				ps.executeUpdate();
 			} catch (ClassNotFoundException | SQLException e) {
 				e.printStackTrace();
@@ -54,7 +54,7 @@ PreparedStatement ps;
 		while(rs.next()) {
 			NewsDto newsDto=new NewsDto();
 			newsDto.setId(rs.getInt("id"));
-			newsDto.setDate(rs.getTimestamp("time"));
+			newsDto.setDate(rs.getString("date"));
 			newsDto.setCategory(rs.getString("content"));
 			newsDto.setTitle(rs.getString("title"));
 			newsDto.setCategory(rs.getString("catagory"));
