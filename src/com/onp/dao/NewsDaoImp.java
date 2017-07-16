@@ -57,7 +57,7 @@ PreparedStatement ps;
 			newsDto.setDate(rs.getString("date"));
 			newsDto.setCategory(rs.getString("content"));
 			newsDto.setTitle(rs.getString("title"));
-			newsDto.setCategory(rs.getString("catagory"));
+			newsDto.setCategory(rs.getString("category"));
 			newsDto.setLocation(rs.getString("location"));
 			newsDto.setImageUrl(rs.getString("image_url"));
 			newsList.add(newsDto);

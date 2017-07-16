@@ -21,8 +21,7 @@ NewsDao newsDao=new NewsDaoImp();
 
 
 	public List<NewsDto> getAllNewsInfo() {
-
-		return null;
+	return	newsDao.getAllNewsInfo();
 	}
 
 
