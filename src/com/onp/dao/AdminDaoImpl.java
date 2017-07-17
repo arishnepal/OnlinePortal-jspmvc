@@ -1,6 +1,7 @@
 package com.onp.dao;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.mysql.jdbc.Statement;
@@ -22,4 +23,22 @@ public class AdminDaoImpl implements AdminDao {
 		e.printStackTrace();
 	}
 }
+	
+	public AdminDto getAdminByUsernameAndPassword(String username, String password) {
+		AdminDto adminDto=new AdminDto();
+		String sql="SELECT * FROM admins WHERE username=? AND password=?";
+	try {
+		ps=DbUtil.getConnection().prepareStatement(sql);
+		ps.setString(1, username);
+		ps.setString(2, password);
+		ResultSet rs=ps.executeQuery(); 
+		while(rs.next()) {
+			adminDto.setUsername(rs.getString("username"));
+			adminDto.setPassword(rs.getString("password"));
+		}
+	} catch (ClassNotFoundException | SQLException e) {
+		e.printStackTrace();
+	}
+	return adminDto;
+	}
 }
